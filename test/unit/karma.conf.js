@@ -11,8 +11,8 @@ module.exports = config => {
         // Adding `--no-sandbox` flag solves the issue, which
         // I know is insecure. But since we are only running
         // tests, there would be no problem.
-        base: 'ChromeHeadless',
-        flags: [ '--no-sandbox' ],
+        base: 'Chrome',
+        flags: [ '--remote-debugging-port=9333' ],
       },
     },
     preprocessors: {
@@ -29,10 +29,7 @@ module.exports = config => {
     reporters: [ 'spec', 'coverage' ],
     coverageReporter: {
       dir: './coverage',
-      reporters: [
-        { type: 'lcov', subdir: '.' },
-        { type: 'text-summary' },
-      ],
+      reporters: [ { type: 'lcov', subdir: '.' }, { type: 'text-summary' } ],
     },
   })
 }

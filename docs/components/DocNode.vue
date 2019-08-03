@@ -37,7 +37,7 @@
         </tr>
         <tr>
           <td><strong>customClass</strong></td>
-          <td class="type">Boolean</td>
+          <td class="type">String</td>
           <td>Can be utilized to give new styles to value labels.</td>
         </tr>
         <tr>
